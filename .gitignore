@@ -1,44 +1,82 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# AXOutliner — macOS / Objective-C / AppKit
+# No dependency managers (no CocoaPods, Carthage, or SPM remote packages)
+# No iOS artifacts (no .ipa, no provisioning profiles)
+# Pure Xcode project, not workspace
 
-## User settings
+# ====================
+# Xcode
+# ====================
+
+# User-specific Xcode settings (window positions, breakpoints, schemes)
+# Every developer regenerates these locally — never commit
 xcuserdata/
 
-## Obj-C/Swift specific
+# Xcode workspace settings that change per-machine
+*.xcworkspace/xcuserdata/
+
+# Build products — always regenerated
+build/
+DerivedData/
+
+# Obj-C header maps (intermediate build artifact)
 *.hmap
 
-## App packaging
-*.ipa
+# Precompiled headers (intermediate build artifact)
+*.pch.gch
+
+# Index data store (Xcode rebuilds this automatically)
+# Can grow to hundreds of MB in large projects
+IndexStoreData/
+
+# ====================
+# Build Artifacts
+# ====================
+
+# Debug symbols archive (regenerate from .dSYM if needed)
 *.dSYM.zip
-*.dSYM
+*.dSYM/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# macOS app bundle (build product, not source)
+*.app
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# Object files
+*.o
+*.obj
 
-Carthage/Build/
+# ====================
+# OS & Editor Junk
+# ====================
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+# macOS Finder metadata
+.DS_Store
 
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# macOS resource forks and Finder info
+._*
+
+# Spotlight indexing
+.Spotlight-V100
+
+# Trash folder on external volumes
+.Trashes
+
+# Thumbnail cache
+Thumbs.db
+
+# ====================
+# Instruments & Profiling
+# ====================
+
+# Instruments trace documents (can be enormous)
+# Keep screenshots of clean runs in docs/, not the raw traces
+*.trace
+*.trace/
+
+# ====================
+# Project-Specific
+# ====================
+
+# Anything in a scratch/ directory (local experimentation)
+scratch/
+
+# Temporary test output
+test_output/
